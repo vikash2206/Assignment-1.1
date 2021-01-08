@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Asignment - 1 Responsive Website</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+	</head>
+    <style>
+        body{
+            margin: 0px;
+            font-family: 'Darker Grotesque', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        container{
+            margin: 0;
+        }
+        
+       
+        
+        .logo{
+            float: left;   
+        }
+        
+        .logo img{
+            width: 50px;
+            height: 50px;
+            border: 2px solid #c0c0c0;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        
+        
+        .title{
+            padding: 200px;
+            color: black;
+            text-align: center;
+            font-size: 70px;
+        }
+        
+        
+        #about{
+            width: 100%;
+            height: 400px;
+            
+        }
+        
+        #services{
+            margin: 0px;
+            width: 100%;
+            height: auto;
+            background-color:#c0c0c0;
+            color:black !important;
+            font-weight: 500;
+        }
+        
+        .backimg{
+             background-image: url("4.jpg");
+             background-size:cover;
+             height: 750px;
+             width: 100%;
+        }
+        
+        .toggle{
+            float: right;
+            display: none;
+        }
+        
+        .toggle a{
+            text-decoration: none;
+            color:blue;
+            font-size: 25px;
+            margin-left: 50px;
+        }
+        
+        footer{
+            width: 100%;
+            height: 100px;
+            background-color: #000000;
+            color: yellow;
+        }
+        
+        footer p{
+            padding: 20px;
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        .display-container{
+            position: relative;
+        }
+        
+        .content{
+            text-align: center;
+            padding: 30px;   
+            font-size: 25px;
+        }
+        
+        .content1{
+            text-align: justify;
+            margin-left: 250px;
+            margin-right: 250px;
+            font-size: 25px;
+        }
+        
+        .shead{
+            text-align: center;
+            padding: 20px;   
+            font-size: 25px;
+        }
+        
+        .serve{
+            margin: 0px;
+        }
+        
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .col{
+            width: 33.3%;  
+            float: left;
+            height: auto;
+            text-align: center;
+            
+        }   
+        
+        .col img{
+            width: 200px;
+            height: 200px;
+            border: 3px solid #c0c0c0;
+            border-radius: 15px;
+        }
+        
+        .col p{
+            text-align: justify;
+            padding: 50px;
+            font-size: 25px;
+        }
+        
+        @media  screen and (max-width:480px){
+            .toggle{
+                display: contents !important;
+            }
+        
+            .mitems{
+                display: none;
+            }        
+        }
+        
+        @media  screen and (max-width:1200px){
+            #about{
+                height: auto;
+            }
+            
+            .content{
+                padding: 25px;
+            }    
+            
+        .content1{
+                width: 90%;
+                margin-left: 20px;
+                margin-right: 10px;
+            }
+        }
+        
+        @media screen and (max-width: 1100px) {
+            .col{
+            width: 100%;
+            }
+        
+            .title{
+                padding: 60px;
+                font-size: 20px;
+            }
+        
+        }
+        
+        #close{
+            display: none;
+        }
+        
+        #show:target {
+            display:inline-grid;
+        }
+
+        
+#hamnav {
+  width: 100%;
+  background: #000;
+  opacity: 0.8;            
+  position: fixed;
+  top: 0;
+}
+
+
+#hamnav label, #hamburger { display: none; }
+
+
+#hamitems { display: flex; }
+#hamitems a {
+  width: 15%;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;    
+}
+#hamitems a:hover {
+  border-bottom: 2px solid #c0c0c0;
+}
+
+
+@media screen and (max-width: 768px){
+  #hamnav label { 
+    display: inline-block; 
+    color: white;
+    background: #000;
+    
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+    margin-left: 360px;
+    margin-top: 10px;  
+  }
+
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    
+    width: 100%;
+    border-top: 1px solid #333;
+    padding: 20px;  
+  }
+    
+    
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
+}       
+        
+    </style>    
+	<body>
+    <div class="container">    
+     <div class="backimg" id="home">
+         <nav id="hamnav">
+           <div class="logo">
+                <a href="#"><img src="7.png"></a>
+           </div>     
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"/>
+ 
+           <div id="hamitems">
+            <a href="#home">collections</a>
+            <a href="#about">Experiments</a>
+            <a href="#services">Services</a>
+            
+           </div>
+         </nav>
+        <div class="title">
+            <h1>Experiments with Google</h1>
+        </div>    
+         
+         
+     </div>   
+     <div id="about">
+         <div class="content">    
+         <h1>ABOUT</h1>
+         </div>    
+         <div class="content1">    
+         <p>Chrome Experiments is a showcase of work by coders who are pushing the 
+             boundaries of web technology, creating beautiful, unique web experiences. 
+             You'll find helpful links throughout the site for creating your own experiments, 
+             and you can also explore resources like WebGL Globe and our workshop of tools.
+              </p>
+         </div>     
+     </div> 
+     <div id="services" class="serve">
+         <div class="shead">
+             <h1>Google Experiments</h1>
+         </div>     
+     <div class="row">
+            <div class="col">
+                
+                <img src="image1.jpg">
+                <h1>CHROME MUSIC</h1>
+                <p> Chrome Music Lab is a website that makes learning music more accessible through fun, hands-on experiments.Many teachers have been using Chrome Music Lab as a tool in their classrooms to explore music and its connections to science, math, art, and more. They’ve been combining it with dance and live instruments. Here’s a collection of some uses we’ve found on Twitter.
+                    We always get inspired by new, unexpected ways that people use these experiments. If you’d like to share something with us, post it with #chromemusiclab or drop us a line.
+                </p>
+            </div>
+         <div class="col">
+                
+                <img src="image2.jpg">
+                <h1>Scan Sequencer Javascript</h1>
+                <p> Using a webcam, make real-time music with your movements Scan Sequencer Javascript takes a realtime web cam image and in turn makes real-time music. It works like a virtual keyboard, the vertical keyboard is recognizing a change of the color of pixels and make a trigger signal. The circles made by trigger signals move to from left to right and when they cross the middle threshold, they play a note. 
+
+                    It is written based on the p5js and tonejs libraries..</p>
+            </div>
+         <div class="col">
+                
+                <img src="globescreenshot.png">
+                <h1>WEBGL GLOBE</h1>
+                <p>The WebGL Globe is an open platform for geographic data visualization featuring latitude/longitude data spikes, color gradients based on data value and mouse wheel zoom functionality.
+
+
+
+                    Get the code, add your own data, and submit your projects to see them featured on the WebGL Globe collection.The WebGL Globe is an open platform built by the Google Data Arts Team for geographic data visualization which encourages users to copy the code, add their own data and create their own globes. </p>
+            </div>
+     </div>
+     
+     <footer>
+         <p>&copy; Google</p>
+     </footer>  
+    </div>    
+  </div>
+ </body>
+</html>
